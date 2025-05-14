@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "build:css": ".\\node_modules\\.bin\\tailwindcss.cmd -i ./src/input.css -o ./public/output.css --watch"
+    "dev": "nodemon backend/server.js",
+    "build:css": ".\\node_modules\\.bin\\tailwindcss.cmd -i ./src/input.css -o ./public/output.css --watch",
+    "build": "npm run build:css",
+    "vercel-build": "npm run build:css",
+    "start": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
